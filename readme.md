@@ -1,5 +1,10 @@
 # TypeScript
 TypeScript is an Object Oriented Language which is built on top of JavaScript
+
+### to transpile .ts file we use 
+```
+tsnd --respawn
+```
 #### TypeScript Extends JavScript
 
 JavaScript is a dynamically typed Language. which means 
