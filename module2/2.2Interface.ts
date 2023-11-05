@@ -10,12 +10,12 @@
     } 
 
     
-    let user1 : UserTypeAlias & {role : string} ={    // use union for accessing other type
+    let user1 : UserTypeAlias & {role : string} ={    // use intersection for accessing other type
         name:"Jon",
         age:35,
         role: "manager"
     }
-    interface User2 extends UserTypeInterface02 {   // use keyWord extends instead of union 
+    interface User2 extends UserTypeInterface02 {   // use keyWord extends instead of intersection
         name : string;
         age: number;
     }
