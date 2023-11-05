@@ -17,7 +17,7 @@
     // and that functio will return all the key values of the object
 
     const getKeyValuesOfObject = <X , Y>(obj : X , key : Y) => {
-        // return obj[key]       // ----->it is giving error
+        return obj[key]       // ----->it is giving error
     } ;
 
     const user = {
@@ -25,9 +25,10 @@
         id:4569,
     }
 
-    const result1 = getKeyValuesOfObject<object , string>(user, 'name')
     // because in the second argument we can pass garbage vlaues but it will not give error
-    const result2 = getKeyValuesOfObject<object , string>(user, 'habijabi')
+
+    const result1 = getKeyValuesOfObject<object , string>(user, 'name') 
+    const result2 = getKeyValuesOfObject<object , string>(user, 'habijabi') 
 }
 // so to fix this
 {
@@ -40,5 +41,5 @@
         id:4569,
     }
     const result1 = getKeyValuesOfObject(user, 'name')
-    // const result2 = getKeyValuesOfObject(user, 'habijabi') // ->> now it will give error
+    const result2 = getKeyValuesOfObject(user, 'habijabi') // ->> now it will give error
 }
