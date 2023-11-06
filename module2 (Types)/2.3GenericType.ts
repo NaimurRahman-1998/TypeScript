@@ -3,17 +3,17 @@
     // To make a generic type we generalized the type by making it dynamic 
     // so that this type can be used for several variables.
 
+    
     type GenericArray1 = number[];
-    type GenericArray2 = Array<number>
-    type GenericArray3<T> = Array<T>   // T is referred to the parameter type passed
-
-    const numberArray1 : number[] | GenericArray1 = [1,2,3]
+    const numberArray1 : GenericArray1 = [1,2,3]
     /* |
        |
-       |---> */ const numberArray2 : Array<number> | GenericArray2 = [1,2,3]
+       |---> */ type GenericArray2 = Array<number>
+                const numberArray2 : GenericArray2 = [1,2,3]
                /* |
                   |
-                  |------> */  const numberArray3 : GenericArray3<number> = [1,2,3]
+                  |------> */   type GenericArray3<T> = Array<T>  // T is referred to the parameter type passed
+                                const numberArray3 : GenericArray3<number> = [1,2,3]
                                                                 /* |
                                                                    | --> Type passed  */
     // so we have made a GenericArray Type 
