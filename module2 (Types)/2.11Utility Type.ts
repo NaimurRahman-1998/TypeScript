@@ -35,7 +35,7 @@
     //   b: string;
     // };
   
-    type MyObj = Record<string, number>;
+    type MyObj = Record<string, number>; // <first -> Key , second -> value>
   
     const EmptyObj: Record<string, unknown> = {};
   
