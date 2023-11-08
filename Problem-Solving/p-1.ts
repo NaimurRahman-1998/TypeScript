@@ -16,12 +16,8 @@ const arrObj: Array<User> = [
   },
 ];
 
-const getPropertiesOfArrayofObj = <T, K extends keyof T>(
-  array: T[],
-  key: K
-): T[K][] => {
-  return array.map((obj) => obj[key]);
-};
-
-const result = getPropertiesOfArrayofObj(arrObj,"id");
+const getPropertiesOfArrayofObj = <T ,K extends keyof T> (arr : T[] , key: K) : T[K][] =>{
+  return arr.map((obj)=>obj[key])
+}
+const result = getPropertiesOfArrayofObj(arrObj,"name");
 console.log(result);
