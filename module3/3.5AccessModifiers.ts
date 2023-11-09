@@ -30,7 +30,7 @@
         }
     }
     const poorPerson = new BankAccount('Jon',35,20)
-    poorPerson.id = 5415  // errror
+    poorPerson.name = 5415  // errror
     poorPerson.balance = // error
 }
 // so to modify the value of balance we create a method inside the class
